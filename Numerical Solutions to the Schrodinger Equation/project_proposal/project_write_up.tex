@@ -1,0 +1,42 @@
+\documentclass{article}
+\usepackage{amsmath}
+    \title{Numerical Solutions to the Schrodinger Equation}
+    \author{Yash Gandhi}
+    
+    \begin{document}
+    \maketitle
+    
+    \section{Project Proposal}
+    The majority of problems in quantum mechanics can be linked to the Schrodinger equation
+    \begin{equation} \label{eq:1}
+        -\frac{\hbar^2}{2m} \nabla^2\Psi(\vec{x})_n + V(\vec{x})\Psi(\vec{x})_n = E_n\Psi(\vec{x})_n.
+    \end{equation}
+    This equation describes the motion of particles defined by quantum mechanical properties as
+    opposed to classical mechanics. Although, as the number of particles increases, the coulomb potential
+    term becomes problematic and makes this differential an incredibly difficult one to solved
+    analytically. To overcome this, there are quite a few algorithms that have allowed researchers
+    to solve more difficult and more complex multi-body problems using numerical approximations.
+    In this project, I will explore numerical approximations to some of the most commonly studied 
+    problems: particle in a box, particle in an infinite well, and the hydrogen atom model (harmonic
+    oscillator). These three problems have been analytically solved, so I will be able to compare 
+    the approximation to the exact solution. These results allow me to explore convergence rates, 
+    order of accuracies, and explore interesting phenomenon such as quantum tunneling. Equation \ref{eq:1}
+    shows the Schrodinger equation in multiple dimensions, but I will mainly be working with the 1D or 
+    2D time independent Schrodinger equation. When we are only concerned about one dimension 
+    equation \ref{eq:1} reduces to
+    \begin{equation}\label{eq:2}
+        -\frac{\hbar^2}{2m} \frac{d^2\psi(x)_n}{dx^2} + V(x)\psi(x)_n = E_n\psi(x). 
+    \end{equation}
+    For some cases, $V(x) = 0$, this simplifies to a second order ODE and is easy to solve with 2nd order 
+    finite difference methods. In the case of the hydrogen atom, the potential 
+    \begin{equation}\label{eq:3}
+        V(r) = k_e\frac{q_1q_2}{r} = \frac{e^2}{4\pi\varepsilon_0 r}.
+    \end{equation} 
+    is a function of position making the problem more difficult and calls for more complex numerical 
+    methods such as using algebraic solvers.
+    
+    
+
+
+
+    \end{document}
